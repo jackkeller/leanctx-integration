@@ -10,6 +10,9 @@
     "performance",
     "openclaw"
   ],
+  "bin": {
+    "leanctx": "bin/leanctx"
+  },
   "scripts": {
     "build": "tsc",
     "watch": "tsc --watch",

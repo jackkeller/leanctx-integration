@@ -1,0 +1,35 @@
+#!/usr/bin/env node
+/**
+ * LeanCTX CLI - Access metrics and control the skill
+ */
+
+const { getMetrics, clearCache } = require('../dist/index.js');
+
+const args = process.argv.slice(2);
+const action = args[0];
+
+switch (action) {
+  case 'metrics':
+  case '--metrics':
+    const metrics = getMetrics();
+    console.log('LeanCTX Metrics');
+    console.log('================');
+    console.log(`Read calls:      ${metrics.readCalls}`);
+    console.log(`Exec calls:      ${metrics.execCalls}`);
+    console.log(`Tokens saved:    ${metrics.tokensSaved.toLocaleString()}`);
+    console.log(`Cache hits:      ${metrics.cacheHits}`);
+    console.log(`Avg compression: ${metrics.avgCompression}%`);
+    console.log(`Cache size:      ${metrics.cacheSize} files`);
+    break;
+  case 'clear':
+  case 'clear-cache':
+    clearCache();
+    console.log('Cache cleared');
+    break;
+  default:
+    console.log('Usage: leanctx [metrics|clear-cache]');
+    console.log('');
+    console.log('  metrics      Show compression metrics');
+    console.log('  clear-cache  Clear the compression cache');
+    process.exit(1);
+}
