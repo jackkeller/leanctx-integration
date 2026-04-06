@@ -88,25 +88,36 @@ Once installed, LeanContext works **automatically** - no code changes required!
 
 ### Check Metrics
 
-```bash
-openclaw skills run leanctx-integration --action=metrics
+Since LeanCTX operates transparently, metrics are accessed via CLI or through your agent.
+
+**Via your agent (recommended for chat channels):**
+Ask your agent: "Show me my LeanCTX metrics" or "How much have we saved?"
+
+Your agent will run: `npx leanctx metrics` and display:
+```
+LeanCTX Metrics
+================
+Read calls:      847
+Exec calls:      234
+Tokens saved:    412,830
+Cache hits:      73%
+Avg compression: 91.4%
+Cache size:      23 files
 ```
 
-Example output:
-```
-SESSION v287 42 min active
-  Tool calls      847
-  Tokens saved    412,830
-  Cache hits      73%
-  Avg compression 91.4%
-  Files cached    23
-  Est. cost saved $1.24
+**Direct CLI (if you have shell access):**
+```bash
+npx leanctx metrics
 ```
 
 ### Clear Cache
 
+**Via your agent:**
+Ask: "Clear the LeanCTX cache"
+
+**Direct CLI:**
 ```bash
-openclaw skills run leanctx-integration --action=clear-cache
+npx leanctx clear-cache
 ```
 
 ## Compression Examples
@@ -176,9 +187,11 @@ Add to `excludedPaths` in config:
 
 ### Cache too large?
 
-Clear it:
+Ask your agent: "Clear the LeanCTX cache"
+
+Or via CLI:
 ```bash
-openclaw skills run leanctx-integration --action=clear-cache
+npx leanctx clear-cache
 ```
 
 ## How it works
