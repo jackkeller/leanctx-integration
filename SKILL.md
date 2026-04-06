@@ -1,7 +1,7 @@
 ---
 name: leanctx-integration
 description: Automatically compresses OpenClaw tool outputs to reduce token usage by 60-99%
-homepage: https://github.com/cybusindustries/leanctx-integration
+homepage: https://github.com/jackkeller/leanctx-integration
 metadata:
   clawdbot:
     emoji: "📦"
