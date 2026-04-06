@@ -88,27 +88,7 @@ Once installed, LeanContext works **automatically** - no code changes required!
 
 ### Check Metrics
 
-Since LeanCTX operates transparently, metrics are accessed via CLI or through your agent.
-
-**Via your agent (recommended for chat channels):**
-Ask your agent: "Show me my LeanCTX metrics" or "How much have we saved?"
-
-Your agent will run: `npx leanctx metrics` and display:
-```
-LeanCTX Metrics
-================
-Read calls:      847
-Exec calls:      234
-Tokens saved:    412,830
-Cache hits:      73%
-Avg compression: 91.4%
-Cache size:      23 files
-```
-
-**Direct CLI (if you have shell access):**
-```bash
-npx leanctx metrics
-```
+**Note:** Metrics tracking has been temporarily disabled. The skill automatically compresses tool outputs, but session-level metrics reporting is not currently available. This feature may be revisited in a future update.
 
 ### Clear Cache
 
