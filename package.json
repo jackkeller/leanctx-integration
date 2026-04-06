@@ -1,0 +1,22 @@
+{
+  "name": "leanctx-integration",
+  "version": "0.1.0",
+  "description": "LeanContext compression layer for OpenClaw tool calls",
+  "author": "OpenClaw Community",
+  "license": "MIT",
+  "keywords": [
+    "compression",
+    "tokens",
+    "performance"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch"
+  },
+  "dependencies": {
+    "typescript": "^5.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^25.5.0"
+  }
+}
