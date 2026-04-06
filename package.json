@@ -1,22 +1,28 @@
 {
   "name": "leanctx-integration",
-  "version": "0.1.0",
-  "description": "LeanContext compression layer for OpenClaw tool calls",
+  "version": "0.1.1",
+  "description": "LeanContext compression layer for OpenClaw tool calls - automatically compresses outputs to reduce token usage",
   "author": "OpenClaw Community",
   "license": "MIT",
   "keywords": [
     "compression",
     "tokens",
-    "performance"
+    "performance",
+    "openclaw"
   ],
   "scripts": {
     "build": "tsc",
-    "watch": "tsc --watch"
+    "watch": "tsc --watch",
+    "test": "node test.js"
   },
   "dependencies": {
     "typescript": "^5.0.0"
   },
   "devDependencies": {
     "@types/node": "^25.5.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jackkeller/leanctx-integration.git"
   }
 }
